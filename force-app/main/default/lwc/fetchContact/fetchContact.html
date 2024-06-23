@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Read Contacts">
+        <!-- <lightning-button label="Get Contacts" onclick={getCon}></lightning-button> -->
+        <template if:true={myCons}>
+            <template for:each={myCons.data} for:item="con">
+                <p key={con.Id}>
+                    First Name: {con.FirstName}
+                </p>
+            </template>
+        </template>
+        <template if:true={myError} >
+            Some error
+        </template>
+        <br>
+        <lightning-tile style="border: 1px solid blue;" label={accId.data} href={accId.data}>
+            content inside tile - {accId.data}
+        </lightning-tile>
+    </lightning-card>
+</template>

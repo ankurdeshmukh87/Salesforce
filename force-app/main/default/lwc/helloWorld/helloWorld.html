@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="My First LWC Card">
+        <div>
+            Value variable is {myVar}.
+            <br/>
+            <lightning-button label="Increment" onclick={myMethod} variant="brand"></lightning-button>
+        </div>
+        <lightning-accordion active-section-name="SecB" >
+            <lightning-accordion-section name="SecA" label="Section A">
+                Displays section A
+            </lightning-accordion-section>
+            <lightning-accordion-section name="SecB" label="Section B">
+                Displays section B
+            </lightning-accordion-section>
+        </lightning-accordion>
+    </lightning-card>
+</template>
